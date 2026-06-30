@@ -1,0 +1,20 @@
+Data structure is a physical organization of memory that stores that stores data in two patterns.
+1.Linear Data structure
+2.  Non Linear Data structure
+
+1. Linear Data Structure - 
+
+A linear data structure are the design in linear fashion where the data accessed in linear order that is one by one.
+The linear data structure is classified in following
+1. Array
+2. Linklist
+3. Stack
+4. Queue
+
+2. Non-Linear Data Structure-
+
+In this structure that grows in any direction according to the need. In non- linear fashion where the data can be accesed in any order.
+The non  linear data structure are classified into following
+1. Tree
+2. Graph
+3. Hash
