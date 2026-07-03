@@ -1,0 +1,27 @@
+Time Complexity -
+
+The rate of increase in time with respect to the input size.
+
+Rules to calculate space complexity
+1. Always Calculate time complexity in terms of worst case.
+2. Avoid the contant values.
+3. Avoid lower bound.
+
+Example: Always calculate the time complexity in terms of worst case.
+
+age = ?
+if age >= 80:
+  print("Super Senior")
+elif age >= 60 and < 80:
+  print("Senior")
+elif age >= 24 and < 60:
+  print("Working Professional")
+elif age >= 14 and < 24:
+  print("Teen")
+else:
+  print("Baby")
+
+we will calculate the time complexity in terms of worst case because if the program can handle worst case situation 
+than it will definately effecient work on best and average case.
+For this program the worst case will if the age is 10
+than we need to check all the condition of the program this is the worst case.
