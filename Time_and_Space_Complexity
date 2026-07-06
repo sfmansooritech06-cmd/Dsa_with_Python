@@ -25,3 +25,19 @@ we will calculate the time complexity in terms of worst case because if the prog
 than it will definately effecient work on best and average case.
 For this program the worst case will if the age is 10
 than we need to check all the condition of the program this is the worst case.
+
+Space Complexity-
+The space complexity of an algorithm is the total space taken by the algorithm with respect
+to the input size.
+Space complexity means taken auxilary space and input space in the memory.
+Auxilary space means the extra space used to solve the problem.
+Input size is used to store the input.
+
+Example -
+
+x = 2, y = 5,  z = 7
+total = (x+y+z)
+print(total)
+
+So input space is x,y,z
+and auxilary space is total variable.
