@@ -1,0 +1,13 @@
+TLE Error stands for Time Limit Exceeded Error. It is a runtime verdict issued by online coding judges which
+indicate that your program takes too long to execute and failed to execute in limited timeframe. TLE does not mean your
+code has bad logic or produces wrong answer. It simple means your
+code is too slow to handle the problem larger test input.
+Why TLE occur?
+Inefficient Time Complexity - Using slow, brute-force approach like o(N2) nested loop when the problem constraints require an
+O(n) or o(nlogn) approch.
+
+Infinite Loops - A bug in your loop condition prevents the code form terminating.
+
+Slow Input/Output - Standard print and read function can bottleneck your code when processing millions of lines of data.
+
+Redundant Operation - Repeatedly recalculating the same value or copying massive objects inside a loop.
