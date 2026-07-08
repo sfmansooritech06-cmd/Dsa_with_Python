@@ -41,3 +41,36 @@ print(total)
 
 So input space is x,y,z
 and auxilary space is total variable.
+
+
+Constraint - 
+Constraint errors usually mean your data type is too small to hold large numbers,
+or you exceeded memory limits.
+
+How to Fix TLE and Constraint ErrorsMatch Complexity to Constraints: 
+Use problem constraints to choose the right algorithm.
+
+A safe rule is that your code should perform under 10⁸ operations per second.
+N ≤ 10: O(N!) or \(O(2^N)\) is acceptable.
+N ≤ 10³: O(N²) is acceptable.
+N ≤ 10⁵: \(O(N \log N)\) or O(N) is required.
+N ≤ 10⁹: \(O(\log N)\) or O(1) is required.
+Use Fast I/O: Slow reading and printing can trigger TLE.
+In C++:
+Add ios_base::sync_with_stdio(false);
+cin.tie(NULL); at the start of your code.
+In Java:
+Switch from Scanner to BufferedReader and StringTokenizer.
+Avoid Primitive Overflow: If values exceed ≈ 2 × 10⁹, use long long in C++ or long in Java instead of int to prevent constraint/overflow errors.
+Remove Nested Loops:
+Replace O(N²) brute-force solutions with efficient patterns like two-pointer, sliding window, or hash maps to achieve O(N) or \(O(N \log N)\) time.
+If you share the problem constraints (e.g., N ≤ 10⁵), the problem statement, and your current code, I can help you refactor it to avoid these errors.
+
+
+
+
+
+
+
+
+
