@@ -1,0 +1,111 @@
+Asymptotic Analysis:-
+
+Asymptotic Analysis is a way to measure how efficient an algorithm is.
+
+It tells us how the running time or memory usage changes when the input size becomes very large (n increases).
+
+Instead of checking the exact time in seconds, we study the growth rate of the algorithm.
+
+Why do we use Asymptotic Analysis?
+To compare different algorithms.
+To know which algorithm performs better for large inputs.
+It does not depend on the computer, programming language, or hardware.
+It focuses on the algorithm's efficiency.
+
+
+Example
+
+Suppose we have two algorithms.
+
+Algorithm A
+
+Takes 5n + 10 operations.
+
+Algorithm B
+
+Takes n² + 2 operations.
+
+For small values of n, both may look similar.
+
+But when n becomes very large:
+
+5n grows slowly.
+n² grows much faster.
+
+So, Algorithm A is more efficient.
+
+Types of Asymptotic Notations
+
+There are three main notations.
+
+1. Big O Notation (O)
+
+Big O tells us the maximum time an algorithm can take.
+
+It is also called the Worst Case.
+
+Example
+
+Searching for a number in an unsorted array.
+
+If the number is at the last position, we check every element.
+
+Time Complexity:
+
+O(n)
+
+Example:
+
+Array = [5, 9, 2, 7, 1]
+
+Find 1
+
+We check:
+5
+9
+2
+7
+1
+
+Total = 5 comparisons
+
+Worst Case = O(n)
+
+
+
+
+2. Omega Notation (Ω)
+
+Omega tells us the minimum time an algorithm can take.
+
+It is also called the Best Case.
+
+Example
+
+If the required number is at the first position.
+
+Array = [5, 9, 2, 7, 1]
+
+Find 5
+
+Only one comparison is needed.
+
+Time Complexity:
+
+Ω(1)
+
+
+
+
+
+3. Theta Notation (Θ)
+
+Theta tells us the average or exact growth of an algorithm.
+
+It gives both the upper and lower limits.
+
+Example:
+
+Θ(n)
+
+means the algorithm usually grows linearly.
