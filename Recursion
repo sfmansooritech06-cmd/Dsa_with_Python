@@ -1,0 +1,139 @@
+
+Introduction to Recursion
+What is Recursion?
+
+Recursion is a programming technique where a function calls itself to solve a problem. Instead of solving the whole problem at once, recursion breaks it into smaller and similar subproblems until it reaches a stopping condition.
+
+Simple Definition:
+
+Recursion is a process in which a function calls itself until a base case is reached.
+
+How Recursion Works
+
+Every recursive function has two important parts:
+
+1. Base Case
+
+The base case is the stopping condition. It prevents the function from calling itself forever.
+
+if n == 0:
+    return
+
+Without a base case, the program will run into infinite recursion and eventually cause a Stack Overflow error.
+
+2. Recursive Case
+
+The recursive case is where the function calls itself with a smaller or simpler input.
+
+function(n - 1)
+
+Each recursive call brings the function one step closer to the base case.
+
+Recursion Flow
+Function Call
+      │
+      ▼
+Check Base Case
+      │
+ ┌────┴────┐
+ │         │
+Yes        No
+ │         │
+Stop    Do Some Work
+           │
+           ▼
+    Call Function Again
+           │
+           ▼
+       Repeat
+Example
+def print_numbers(n):
+    if n == 0:
+        return
+
+    print(n)
+    print_numbers(n - 1)
+
+print_numbers(5)
+Output
+5
+4
+3
+2
+1
+Step-by-Step Execution
+print_numbers(5)
+│
+├── Print 5
+└── print_numbers(4)
+      │
+      ├── Print 4
+      └── print_numbers(3)
+            │
+            ├── Print 3
+            └── print_numbers(2)
+                  │
+                  ├── Print 2
+                  └── print_numbers(1)
+                        │
+                        ├── Print 1
+                        └── print_numbers(0)
+                              │
+                              └── Stop
+Why Use Recursion?
+
+Recursion is useful when a problem can be divided into smaller versions of the same problem. It makes code cleaner and easier to understand for many complex problems.
+
+Common applications include:
+
+Factorial
+Fibonacci Series
+Binary Search
+Tree Traversal
+Graph Traversal (DFS)
+Merge Sort
+Quick Sort
+Tower of Hanoi
+Backtracking Problems
+Advantages
+Makes code shorter and easier to read.
+Helps solve complex problems with simple logic.
+Best suited for tree and graph algorithms.
+Commonly used in divide-and-conquer algorithms.
+Disadvantages
+Uses extra memory because each function call is stored in the call stack.
+Can be slower than loops.
+Too many recursive calls may cause a Stack Overflow.
+Debugging recursive functions can be difficult for beginners.
+Recursion vs Iteration
+Recursion	Iteration
+Function calls itself	Uses loops (for or while)
+Requires a base case	Requires a loop condition
+Uses call stack memory	Uses less memory
+Better for recursive problems like trees	Better for simple repetitive tasks
+Time Complexity
+
+The time complexity depends on the problem.
+
+Problem	Time Complexity
+Print Numbers	O(n)
+Factorial	O(n)
+Fibonacci (Simple Recursion)	O(2ⁿ)
+Space Complexity
+
+Recursion uses the call stack to store function calls.
+
+If there are n recursive calls, then:
+
+Space Complexity = O(n)
+Key Points to Remember
+A recursive function calls itself.
+Every recursive function must have a base case.
+The recursive call should always move toward the base case.
+Missing the base case leads to infinite recursion and Stack Overflow.
+Recursion is widely used in trees, graphs, divide-and-conquer, and backtracking algorithms.
+Summary
+Recursion is a technique where a function calls itself.
+It solves large problems by breaking them into smaller subproblems.
+Every recursive function contains a base case and a recursive case.
+It is a powerful technique used in many algorithms and data structures, especially where problems have a recursive nature.
