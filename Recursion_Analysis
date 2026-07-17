@@ -1,0 +1,135 @@
+📘 How to Analyze the Complexity of Recurrence Relations
+📌 What is a Recurrence Relation?
+
+A recurrence relation is an equation that shows the running time of a recursive algorithm.
+
+It expresses the current problem in terms of smaller subproblems.
+
+General Form
+T(n) = Recursive Work + Extra Work
+Example
+T(n) = 2T(n/2) + O(n)
+
+This means:
+
+Problem is divided into 2 smaller parts
+Each part has size n/2
+Merging both parts takes O(n) time
+
+Example: Merge Sort
+
+🎯 Why Do We Solve Recurrence Relations?
+
+Solving recurrence relations helps us:
+
+Find the time complexity of recursive algorithms.
+Compare algorithm efficiency.
+Choose the best algorithm.
+Understand how recursion grows.
+Optimize recursive solutions.
+🧠 Steps to Analyze a Recursive Algorithm
+Step 1: Count Recursive Calls
+
+Find how many recursive calls are made.
+
+Example:
+
+fun(n/2);
+fun(n/2);
+
+There are 2 recursive calls.
+
+Step 2: Find Problem Size
+
+Check how the input size changes.
+
+Example
+
+n → n/2
+Step 3: Find Extra Work
+
+Look for loops or other operations outside recursion.
+
+Example
+
+for(int i=0;i<n;i++)
+
+Extra work = O(n)
+
+Step 4: Write the Recurrence
+
+Combine everything.
+
+T(n) = 2T(n/2) + O(n)
+🔥 Methods to Solve Recurrence Relations
+
+There are 3 popular methods.
+
+1️⃣ Substitution Method
+Idea
+Guess the answer.
+Prove it using Mathematical Induction.
+Best For
+Small recurrence relations.
+When you already know the expected complexity.
+Example
+T(n) = 2T(n/2) + n
+
+Guess:
+
+T(n) = O(n log n)
+
+Then prove it.
+
+2️⃣ Recursion Tree Method
+Idea
+
+Draw recursion as a tree.
+
+Calculate:
+
+Cost of each level
+Number of levels
+
+Finally,
+
+Total Cost = Sum of all levels
+Example
+        T(n)
+      /      \
+   T(n/2)   T(n/2)
+
+If every level costs n
+
+and there are log n levels,
+
+Then
+
+Time Complexity = O(n log n)
+3️⃣ Master Theorem
+
+The fastest method for Divide & Conquer recurrences.
+
+It works only for:
+
+T(n) = aT(n/b) + f(n)
+
+Where
+
+a = Number of recursive calls
+b = Size reduction factor
+f(n) = Extra work
+
+Example
+
+T(n)=2T(n/2)+n
+
+Answer
+
+O(n log n)
+📌 Common Examples
+Recurrence	Algorithm	Complexity
+T(n)=T(n/2)+1	Binary Search	O(log n)
+T(n)=2T(n/2)+n	Merge Sort	O(n log n)
+T(n)=T(n-1)+1	Linear Recursion	O(n)
+T(n)=T(n-1)+n	Recursive Sum	O(n²)
