@@ -1,0 +1,78 @@
+Example 1: Normal Function
+def greet():
+    print("Good Morning")
+
+greet()
+
+Output:
+
+Good Morning
+Example 2: Infinite Recursion
+def greet():
+    print("Hello Sir")
+    greet()
+
+greet()
+
+In this example, greet() keeps calling itself forever because there is no stopping condition.
+
+What Happens in Infinite Recursion?
+
+Every time a function is called, Python stores it in the call stack.
+
+greet()
+greet()
+greet()
+greet()
+greet()
+...
+
+As more function calls are added, the stack keeps growing.
+
+Eventually, the stack becomes full, which causes an error.
+
+Stack Overflow
+
+When recursion never stops, the call stack becomes full.
+
+This situation is called Stack Overflow.
+
+Python raises an error instead of running forever.
+
+Python Recursion Limit
+
+Python allows only a limited number of recursive function calls.
+
+Default recursion limit is around 1000 calls (commonly about 1000).
+If this limit is exceeded, Python raises:
+RecursionError: maximum recursion depth exceeded
+How to Avoid Infinite Recursion?
+
+Always provide a Base Case (Stopping Condition).
+
+A base case tells the function when to stop calling itself.
+
+Example
+def greet(n):
+    if n == 0:      # Base Case
+        return
+
+    print("Hello")
+    greet(n - 1)
+
+greet(5)
+
+Output
+
+Hello
+Hello
+Hello
+Hello
+Hello
+Key Points
+Recursion means a function calls itself.
+Every recursive call is stored in the call stack.
+Without a base case, recursion becomes infinite.
+Infinite recursion causes a Stack Overflow.
+Python stops it by raising a RecursionError after reaching the maximum recursion depth.
+Always include a base case to terminate recursion.
